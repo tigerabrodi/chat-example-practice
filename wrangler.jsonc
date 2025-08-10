@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "react-router-cloudflare",
+  "main": "./app/entry.worker.ts",
+  "account_id": "1d3c36046b3ec8c89ccb2c63eddb184e",
+  "compatibility_date": "2025-04-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "dev": { "port": 3000 },
+  "placement": { "mode": "off" },
+  "observability": { "enabled": true },
+  "assets": { "directory": "./build/client" },
+  "kv_namespaces": [
+    {
+      "binding": "MY_KV",
+      "id": "39b0b805e4ff445690c6b884ec64f3fa",
+      "preview_id": "97862d7c0cb841b494fd228298510464",
+    },
+  ],
+}
