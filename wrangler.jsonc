@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
   "name": "react-router-cloudflare",
   "main": "./app/entry.worker.ts",
-  "account_id": "1d3c36046b3ec8c89ccb2c63eddb184e",
+  "account_id": "4aaa146876410e26660ee27f6d7a2f7d",
   "compatibility_date": "2025-04-07",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
