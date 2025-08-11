@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   getUserIdFromRequest,
-  redirectAuthUserToRoom,
+  redirectAuthUserToRooms,
 } from "@/lib/auth.server";
 import { ROUTES } from "@/lib/constants";
 import {
@@ -67,7 +67,7 @@ export async function loader({ request }: Route.LoaderArgs) {
 
   if (!userId) return null;
 
-  return redirectAuthUserToRoom({ userId });
+  return redirectAuthUserToRooms();
 }
 
 export default function AuthPage() {

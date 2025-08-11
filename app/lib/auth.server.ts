@@ -42,7 +42,11 @@ type AuthResponse =
     }
   | {
       type: "result";
-      user: User;
+      user: {
+        id: string;
+        username: string;
+        email: string;
+      };
     };
 
 export async function requireAuth({
@@ -62,9 +66,11 @@ export async function requireAuth({
     };
   }
 
-  const user = await prisma.user.findUnique({
-    where: { id: userId },
-  });
+  // const user = await prisma.user.findUnique({
+  //   where: { id: userId },
+  // });
+
+  const user = null;
 
   // if user doesn't exist for whatever reason
   // logout
@@ -105,21 +111,8 @@ export async function logout({ request }: { request: Request }) {
   });
 }
 
-export async function redirectAuthUserToRoom({ userId }: { userId: string }) {
-  const userRoom = await prisma.room.findUnique({
-    where: {
-      ownerId: userId,
-    },
-  });
-
-  // Should never happen
-  // Users are always created with a room
-  // just safety net
-  if (!userRoom) {
-    return redirect("/login");
-  }
-
-  return redirect(generatePath(ROUTES.roomDetail, { roomCode: userRoom.code }));
+export async function redirectAuthUserToRooms() {
+  return redirect(generatePath(ROUTES.rooms));
 }
 
 export { typedAuthSessionStorage };

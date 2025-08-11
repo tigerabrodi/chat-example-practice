@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { TabsContent } from "@/components/ui/tabs";
 import {
   getUserIdFromRequest,
-  redirectAuthUserToRoom,
+  redirectAuthUserToRooms,
 } from "@/lib/auth.server";
 import { FORM_INTENT_KEY, FORM_INTENT_VALUES } from "@/lib/constants";
 import { useForm } from "@conform-to/react";
@@ -40,7 +40,7 @@ type FormSchema = z.infer<typeof formSchema>;
 
 export async function loader({ request }: Route.LoaderArgs) {
   const userId = await getUserIdFromRequest({ request });
-  if (userId) return redirectAuthUserToRoom({ userId });
+  if (userId) return redirectAuthUserToRooms();
   return null;
 }
 
