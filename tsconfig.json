@@ -2,5 +2,12 @@
   "extends": "@total-typescript/tsconfig/bundler/dom/app",
   "files": [],
   "references": [{ "path": "./tsconfig.cloudflare.json" }],
-  "compilerOptions": {}
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/*"],
+      "@rr-views/*": [".react-router/types/app/routes/views/*"],
+      "@rr-resources/*": [".react-router/types/app/routes/resources/*"]
+    }
+  }
 }
