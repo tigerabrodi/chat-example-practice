@@ -25,7 +25,7 @@
       },
       "devDependencies": {
         "@cloudflare/vite-plugin": "^1.13.15",
-        "@cloudflare/workers-types": "^4.20251011.0",
+        "@cloudflare/workers-types": "^4.20251014.0",
         "@react-router/dev": "^7.8.0",
         "@tailwindcss/vite": "^4.1.11",
         "@total-typescript/ts-reset": "^0.6.1",
@@ -121,7 +121,7 @@
 
     "@cloudflare/workerd-windows-64": ["@cloudflare/workerd-windows-64@1.20251011.0", "", { "os": "win32", "cpu": "x64" }, "sha512-RIXUQRchFdqEvaUqn1cXZXSKjpqMaSaVAkI5jNZ8XzAw/bw2bcdOVUtakrflgxDprltjFb0PTNtuss1FKtH9Jg=="],
 
-    "@cloudflare/workers-types": ["@cloudflare/workers-types@4.20251011.0", "", {}, "sha512-gQpih+pbq3sP4uXltUeCSbPgZxTNp2gQd8639SaIbQMwgA6oJNHLhIART1fWy6DQACngiRzDVULA2x0ohmkGTQ=="],
+    "@cloudflare/workers-types": ["@cloudflare/workers-types@4.20251014.0", "", {}, "sha512-tEW98J/kOa0TdylIUOrLKRdwkUw0rvvYVlo+Ce0mqRH3c8kSoxLzUH9gfCvwLe0M89z1RkzFovSKAW2Nwtyn3w=="],
 
     "@conform-to/dom": ["@conform-to/dom@1.8.2", "", {}, "sha512-5eDqI9366+23Fl/E5zxebuy2FCebJKpSrdE/c6PZQ5Ul59BYQ17pBmkLkvxAKjPXW+Qq77BJyjGjuklwmqN08A=="],
 
